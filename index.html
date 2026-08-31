@@ -2,31 +2,157 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo de estructura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alelí | Cheesecakes</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-<header> 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Our Website</h1>
-                <p></p>
-                <a href="#about" class="btn">Learn More</a>
-            </div>
-        </section>
-    </main>
-    <nav>
-        <ul>
-            <li><a href="Inicio">Home</a></li>
-            <li><a href="Productos">CheeseCake</a></li>
-            <li><a href="#Carrito">Compras</a></li>
-            <li><a href="#Contacto">Contact</a></li>
-            <li><a href="#contacto">Contact</a></li>
-        </ul>
+
+    <!-- Navegación -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Alelí</h1>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Inicio -->
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="hero-text">
+                <p class="small-title">CHEESECAKES ARTESANALES</p>
+
+                <h2>Un pedacito de felicidad<br>
+                    en cada porción.</h2>
+
+                <p>
+                    Cheesecakes caseros, cremosos y preparados
+                    con mucho amor para endulzar tus momentos.
+                </p>
+
+                <a href="#productos" class="button">
+                    Ver productos
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <span>🍰</span>
+                <h3>Alelí</h3>
+                <p>Cheesecakes hechos con amor</p>
+            </div>
+        </section>
+
+        <!-- Productos -->
+        <section id="productos" class="products">
+            <div class="section-title">
+                <p>CONOCÉ NUESTROS SABORES</p>
+                <h2>Nuestros cheesecakes</h2>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-image">🍓</div>
+                    <div class="product-info">
+                        <h3>Cheesecake de Frutilla</h3>
+                        <p>
+                            Base crocante, crema de cheesecake
+                            y una deliciosa cobertura de frutillas.
+                        </p>
+                        <strong>$8.500</strong>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">🍫</div>
+                    <div class="product-info">
+                        <h3>Cheesecake de Chocolate</h3>
+                        <p>
+                            Cremoso cheesecake de chocolate
+                            con una suave cobertura de cacao.
+                        </p>
+                        <strong>$9.000</strong>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">🍋</div>
+                    <div class="product-info">
+                        <h3>Cheesecake de Limón</h3>
+                        <p>
+                            Una combinación fresca y equilibrada
+                            de cheesecake y limón.
+                        </p>
+                        <strong>$8.500</strong>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">🫐</div>
+                    <div class="product-info">
+                        <h3>Cheesecake de Frutos Rojos</h3>
+                        <p>
+                            Cheesecake clásico acompañado de
+                            frutos rojos y salsa artesanal.
+                        </p>
+                        <strong>$9.500</strong>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="about">
+            <div>
+                <p class="small-title">SOBRE ALELÍ</p>
+                <h2>Hecho artesanalmente,<br>hecho con amor.</h2>
+
+                <p>
+                    En Alelí creemos que los mejores momentos
+                    empiezan con algo rico. Por eso elaboramos
+                    nuestros cheesecakes de manera artesanal,
+                    cuidando cada detalle.
+                </p>
+
+                <p>
+                    Ingredientes seleccionados, recetas caseras
+                    y mucho amor en cada preparación.
+                </p>
+            </div>
+
+            <div class="about-decoration">
+                🧁
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact">
+            <p class="small-title">¿TENÉS UN ANTOJO?</p>
+            <h2>Elegí tu cheesecake favorito</h2>
+
+            <p>
+                Hacé tu pedido y disfrutá de un momento dulce con Alelí.
+            </p>
+
+            <a href="#" class="button">Hacer un pedido</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <h2>Alelí</h2>
+        <p>Cheesecakes artesanales ♡</p>
+        <p>© 2026 Alelí. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
