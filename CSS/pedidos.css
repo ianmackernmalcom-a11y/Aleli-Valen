@@ -1,0 +1,444 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alelí | Hacer un pedido</title>
+
+<!-- Mismo CSS de la página principal -->
+<link rel="stylesheet" href="CSS/style.css">
+
+<style>
+    /* ------------------------------
+       PÁGINA DE PEDIDO
+    ------------------------------ */
+
+    .order-page {
+        padding: 70px 8%;
+        background-color: #f7f0df;
+    }
+
+    .order-title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .order-title h2 {
+        color: #2864a8;
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+
+    .order-title p {
+        font-family: Arial, sans-serif;
+        color: #71695f;
+        font-size: 15px;
+    }
+
+    .order-form {
+        max-width: 800px;
+        margin: auto;
+        background-color: #fffaf0;
+        padding: 45px;
+        border-radius: 25px;
+        box-shadow: 0 15px 35px rgba(75, 60, 40, 0.10);
+    }
+
+    .form-section {
+        margin-bottom: 35px;
+    }
+
+    .form-section h3 {
+        color: #2864a8;
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #514b44;
+        margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 13px 15px;
+        border: 1px solid #d8cdbb;
+        border-radius: 12px;
+        background-color: #f7f0df;
+        color: #3f3a35;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #2864a8;
+        box-shadow: 0 0 0 3px rgba(40, 100, 168, 0.10);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .payment-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .payment-option {
+        border: 1px solid #d8cdbb;
+        border-radius: 12px;
+        padding: 15px;
+        background-color: #f7f0df;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .payment-option:hover {
+        border-color: #2864a8;
+    }
+
+    .payment-option input {
+        margin-right: 8px;
+        accent-color: #2864a8;
+    }
+
+    .order-submit {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .order-submit button {
+        border: none;
+        cursor: pointer;
+    }
+
+    .back-button {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #2864a8;
+    }
+
+    .back-button:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+
+        .order-page {
+            padding: 50px 6%;
+        }
+
+        .order-form {
+            padding: 30px 22px;
+        }
+
+        .order-title h2 {
+            font-size: 35px;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .payment-options {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+</head> <body>
+<!-- NAVBAR -->
+
+<header>
+
+    <nav class="navbar">
+
+        <h1 class="logo">Alelí</h1>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <li>
+                <a href="index.html#productos">Productos</a>
+            </li>
+
+            <li>
+                <a href="index.html#nosotros">Nosotros</a>
+            </li>
+
+            <li>
+                <a href="index.html#contacto">Contacto</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- PÁGINA DE PEDIDO -->
+
+<main>
+
+    <section class="order-page">
+
+        <div class="order-title">
+
+            <p class="small-title">
+                HACÉ TU PEDIDO
+            </p>
+
+            <h2>
+                Reservá tu cheesecake
+            </h2>
+
+            <p>
+                Completá los siguientes datos para realizar tu pedido.
+            </p>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <form class="order-form">
+
+
+            <!-- DATOS DEL CLIENTE -->
+
+            <div class="form-section">
+
+                <h3>
+                    Datos del cliente
+                </h3>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+                            Nombre *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="apellido">
+                            Apellido *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            placeholder="Tu apellido"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="dni">
+                            DNI *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dni"
+                            name="dni"
+                            placeholder="Ej: 45123456"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telefono">
+                            Teléfono *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ej: 351 123 4567"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tucorreo@email.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATOS DEL PEDIDO -->
+
+            <div class="form-section">
+
+                <h3>
+                    Datos del pedido
+                </h3>
+
+
+                <div class="form-group">
+
+                    <label for="sabor">
+                        Elegí tu cheesecake *
+                    </label>
+
+                    <select
+                        id="sabor"
+                        name="sabor"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccioná un sabor
+                        </option>
+
+                        <option value="Cheesecake de Frutilla">
+                            🍓 Cheesecake de Frutilla
+                        </option>
+
+                        <option value="Cheesecake de Chocolate">
+                            🍫 Cheesecake de Chocolate
+                        </option>
+
+                        <option value="Cheesecake de Limón">
+                            🍋 Cheesecake de Limón
+                        </option>
+
+                        <option value="Cheesecake de Frutos Rojos">
+                            🫐 Cheesecake de Frutos Rojos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="cantidad">
+                            Cantidad *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="cantidad"
+                            name="cantidad"
+                            min="1"
+                            value="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="fecha">
+                            ¿Para qué día lo querés? *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="horario">
+                        Horario aproximado *
+                    </label>
+
+                    <select
+                        id="horario"
+                        name="horario"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccioná un horario
+                        </option>
+
+                        <option value="10:00 - 12:00">
+                            10:00 - 12:00
+                        </option>
+
+                        <option value="12

@@ -1,0 +1,652 @@
+<!DOCTYPE html> <html lang="es"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alelí | Hacer un pedido</title>
+
+<!-- CSS de la página principal -->
+<link rel="stylesheet" href="CSS/style.css">
+
+<!-- CSS exclusivo de pedidos -->
+<link rel="stylesheet" href="CSS/pedido.css">
+
+</head> <body>
+<!-- ==============================
+     NAVEGACIÓN
+=============================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <h1 class="logo">
+            Alelí
+        </h1>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#productos">
+                    Productos
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#nosotros">
+                    Nosotros
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contacto">
+                    Contacto
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==============================
+     CONTENIDO PRINCIPAL
+=============================== -->
+
+<main>
+
+    <section class="pedido">
+
+
+        <!-- ENCABEZADO -->
+
+        <div class="pedido-header">
+
+            <p class="small-title">
+                HACÉ TU PEDIDO
+            </p>
+
+
+            <h2>
+                Reservá tu cheesecake
+            </h2>
+
+
+            <p>
+                Completá tus datos y contanos qué cheesecake
+                querés disfrutar.
+            </p>
+
+        </div>
+
+
+
+        <!-- ==============================
+             FORMULARIO
+        =============================== -->
+
+        <form class="pedido-form">
+
+
+            <!-- ==============================
+                 DATOS DEL CLIENTE
+            =============================== -->
+
+            <div class="form-section">
+
+                <h3>
+                    Datos personales
+                </h3>
+
+
+                <p class="section-description">
+                    Completá tus datos para poder confirmar
+                    tu pedido.
+                </p>
+
+
+
+                <!-- NOMBRE / APELLIDO -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+                            Nombre *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="apellido">
+                            Apellido *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            placeholder="Tu apellido"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DNI / TELÉFONO -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="dni">
+                            DNI *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dni"
+                            name="dni"
+                            placeholder="Ej: 45123456"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="telefono">
+                            Teléfono *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ej: 351 123 4567"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="tucorreo@email.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 DATOS DEL PEDIDO
+            =============================== -->
+
+            <div class="form-section">
+
+                <h3>
+                    Tu pedido
+                </h3>
+
+
+                <p class="section-description">
+                    Elegí el sabor, cantidad y fecha.
+                </p>
+
+
+
+                <!-- SABOR -->
+
+                <div class="form-group">
+
+                    <label for="sabor">
+                        Sabor del cheesecake *
+                    </label>
+
+
+                    <select
+                        id="sabor"
+                        name="sabor"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccioná un sabor
+                        </option>
+
+
+                        <option value="Cheesecake de Frutilla">
+                            🍓 Cheesecake de Frutilla — $8.500
+                        </option>
+
+
+                        <option value="Cheesecake de Chocolate">
+                            🍫 Cheesecake de Chocolate — $9.000
+                        </option>
+
+
+                        <option value="Cheesecake de Limón">
+                            🍋 Cheesecake de Limón — $8.500
+                        </option>
+
+
+                        <option value="Cheesecake de Frutos Rojos">
+                            🫐 Cheesecake de Frutos Rojos — $9.500
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CANTIDAD / FECHA -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="cantidad">
+                            Cantidad *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="cantidad"
+                            name="cantidad"
+                            min="1"
+                            value="1"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="fecha">
+                            ¿Para qué día? *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- HORARIO -->
+
+                <div class="form-group">
+
+                    <label for="horario">
+                        Horario aproximado *
+                    </label>
+
+
+                    <select
+                        id="horario"
+                        name="horario"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccioná un horario
+                        </option>
+
+
+                        <option value="10:00 - 12:00">
+                            10:00 - 12:00
+                        </option>
+
+
+                        <option value="12:00 - 14:00">
+                            12:00 - 14:00
+                        </option>
+
+
+                        <option value="14:00 - 16:00">
+                            14:00 - 16:00
+                        </option>
+
+
+                        <option value="16:00 - 18:00">
+                            16:00 - 18:00
+                        </option>
+
+
+                        <option value="18:00 - 20:00">
+                            18:00 - 20:00
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 ENTREGA
+            =============================== -->
+
+            <div class="form-section">
+
+                <h3>
+                    Entrega
+                </h3>
+
+
+                <p class="section-description">
+                    Elegí cómo querés recibir tu cheesecake.
+                </p>
+
+
+
+                <!-- MODALIDAD -->
+
+                <div class="form-group">
+
+                    <label for="entrega">
+                        Modalidad de entrega *
+                    </label>
+
+
+                    <select
+                        id="entrega"
+                        name="entrega"
+                        required
+                    >
+
+                        <option value="">
+                            Seleccioná una opción
+                        </option>
+
+
+                        <option value="Retiro">
+                            📦 Retiro
+                        </option>
+
+
+                        <option value="Envío a domicilio">
+                            🛵 Envío a domicilio
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DIRECCIÓN -->
+
+                <div class="form-group">
+
+                    <label for="direccion">
+                        Dirección
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Calle, número, barrio..."
+                    >
+
+                </div>
+
+
+
+                <!-- ACLARACIONES -->
+
+                <div class="form-group">
+
+                    <label for="aclaraciones">
+                        Aclaraciones del pedido
+                    </label>
+
+
+                    <textarea
+                        id="aclaraciones"
+                        name="aclaraciones"
+                        placeholder="Ej: Quiero una dedicatoria, algún detalle especial, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 MÉTODO DE PAGO
+            =============================== -->
+
+            <div class="form-section">
+
+                <h3>
+                    Método de pago
+                </h3>
+
+
+                <p class="section-description">
+                    Elegí cómo preferís abonar tu pedido.
+                </p>
+
+
+
+                <div class="payment-grid">
+
+
+                    <!-- EFECTIVO -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="Efectivo"
+                            required
+                        >
+
+                        <span class="payment-icon">
+                            💵
+                        </span>
+
+                        <span>
+                            Efectivo
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- TRANSFERENCIA -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="Transferencia"
+                        >
+
+                        <span class="payment-icon">
+                            🏦
+                        </span>
+
+                        <span>
+                            Transferencia
+                        </span>
+
+                    </label>
+
+
+
+                    <!-- MERCADO PAGO -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="pago"
+                            value="Mercado Pago"
+                        >
+
+                        <span class="payment-icon">
+                            💳
+                        </span>
+
+                        <span>
+                            Mercado Pago
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 CONFIRMACIÓN
+            =============================== -->
+
+            <div class="confirmation">
+
+
+                <input
+                    type="checkbox"
+                    id="confirmacion"
+                    required
+                >
+
+
+                <label for="confirmacion">
+                    Confirmo que los datos ingresados son correctos.
+                </label>
+
+
+            </div>
+
+
+
+            <!-- ==============================
+                 BOTÓN
+            =============================== -->
+
+            <div class="pedido-button">
+
+                <button
+                    type="submit"
+                    class="button"
+                >
+                    Hacer un pedido
+                </button>
+
+            </div>
+
+
+
+            <!-- VOLVER -->
+
+            <a
+                href="index.html"
+                class="volver"
+            >
+                ← Volver a Alelí
+            </a>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+
+<!-- ==============================
+     FOOTER
+=============================== -->
+
+<footer>
+
+    <h2>
+        Alelí
+    </h2>
+
+
+    <p>
+        Cheesecakes artesanales ♡
+    </p>
+
+
+    <p>
+        © 2026 Alelí. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+</body> </html>
