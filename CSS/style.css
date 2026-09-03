@@ -34,7 +34,7 @@ a {
 ------------------------------ */
 
 header {
-    background-color: #f7f0df;
+    background-color: #f4e9d7;
     padding: 20px 7%;
 }
 
@@ -118,6 +118,9 @@ header {
     border-radius: 30px;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
     transition: 0.3s;
 }
 
@@ -206,12 +209,22 @@ header {
 
 .product-image {
     height: 190px;
-    background-color: #eadcc3;
+    width: 100%;
+    background-color: #eadcc3; /* Mantiene el color de fondo estético */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
+    padding: 10px; /* Un pequeño respiro para que la foto no pegue contra los bordes */
 }
+
+.product-image img {
+    max-width: 100%;
+    max-height: 120%;
+    object-fit: contain; /* Cambiado de cover a contain para que se vea la torta entera sin cortarse mal */
+    display: block;
+}
+
 
 .product-info {
     padding: 25px;
@@ -326,6 +339,121 @@ footer p {
 }
 
 /* ------------------------------
+   ESTILOS PÁGINA DE PEDIDOS (pedido.html)
+------------------------------ */
+
+.order-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f7f0df;
+}
+
+.order-container {
+    background-color: #fffaf0;
+    width: 100%;
+    max-width: 600px;
+    padding: 45px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
+}
+
+.order-header {
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-header h2 {
+    color: #3f3a35;
+    font-size: 34px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.order-header p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #71695f;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3f3a35;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #dcd1be;
+    border-radius: 12px;
+    background-color: #f7f0df;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3f3a35;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2864a8;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(40, 100, 168, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.form-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.back-link {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #2864a8;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #1d4d82;
+}
+
+/* ------------------------------
    RESPONSIVE
 ------------------------------ */
 
@@ -392,5 +520,9 @@ footer p {
     .about h2,
     .contact h2 {
         font-size: 32px;
+    }
+
+    .order-container {
+        padding: 30px 20px;
     }
 }
