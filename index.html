@@ -8,30 +8,33 @@
 </head>
 <body>
 
-    <!-- Navegación -->
+<!-- Navegación -->
     <header>
         <nav class="navbar">
-            <!-- Espaciador invisible para balancear y centrar perfectamente el logo en desktop -->
-            <div class="nav-spacer"></div>
-            
-            <h1 class="logo">Alelí</h1>
-
-            <ul class="nav-links">
+            <ul class="nav-links nav-left">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
+            </ul>
+
+            <a href="#inicio" class="logo-container">
+                <span class="navbar-logo-text">Alelí</span>
+            </a>
+
+            <ul class="nav-links nav-right">
                 <li><a href="#pedido">Hacer un pedido</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Inicio -->
+    
+    <!-- Inicio / Hero -->
     <main>
-
         <section id="inicio" class="hero">
             <div class="hero-text">
-                <p class="small-title">CHEESECAKES ARTESANALES</p>
+                
+                <!-- TÍTULO DE TEXTO "ALELÍ" CENTRADO -->
+                
 
                 <h2>Un pedacito de felicidad<br>
                     en cada porción.</h2>
@@ -47,8 +50,10 @@
             </div>
 
             <div class="hero-card">
-                <span><img src="IMG/chocolate cheese pmg.png" alt="Porción deCheeseCake de Chocolate"></span>
-                <h3>Alelí</h3>
+                <div class="hero-card-img-container">
+                    <img src="" alt="Porción de CheeseCake de Chocolate" class="hero-slice">
+                </div>
+                <h3 class="hero-card-brand">Alelí</h3>
                 <p>Cheesecakes hechos con amor</p>
             </div>
         </section>
@@ -62,58 +67,70 @@
 
             <div class="product-grid">
 
-                <article class="product-card">
-                    <div class="product-image"><img src="IMG/frutillacake.png" alt="Cheesecake de Frutilla"></div>
+                <!-- 1. Frutilla -->
+                <article class="product-card" data-flavor="frutilla">
+                    <div class="product-image">
+                        <img src="IMG/frutilla alale.png" alt="Cheesecake de Frutilla">
+                    </div>
                     <div class="product-info">
                         <h3>Cheesecake de Frutilla</h3>
-                        <p>
-                            Base crocante, crema de cheesecake
-                            y una deliciosa cobertura de frutillas.
-                        </p>
-                        <strong>$12.500</strong>
+                        <p>Base crocante, crema de cheesecake y una deliciosa cobertura de frutillas.</p>
+                        <div class="product-footer">
+                            <strong>$12.500</strong>
+                            <a href="#pedido" class="order-link">Pedir ahora</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-image"><img src="IMG/cocholate con fonde.png" alt="Cheesecake de Chocolate"></div>
+                <!-- 2. Chocolate -->
+                <article class="product-card" data-flavor="chocolate">
+                    <div class="product-image">
+                        <img src="IMG/chocolate.png" alt="Cheesecake de Chocolate">
+                    </div>
                     <div class="product-info">
                         <h3>Cheesecake de Chocolate</h3>
-                        <p>
-                            Cremoso cheesecake de chocolate
-                            con una suave cobertura de cacao.
-                        </p>
-                        <strong>$12.000</strong>
+                        <p>Cremoso cheesecake de chocolate con una suave cobertura de cacao.</p>
+                        <div class="product-footer">
+                            <strong>$12.000</strong>
+                            <a href="#pedido" class="order-link">Pedir ahora</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-image"><img src="IMG/matcha.png" alt="Cheesecake de Frutilla"></div>
+                <!-- 3. Pistacho -->
+                <article class="product-card" data-flavor="pistacho">
+                    <div class="product-image">
+                        <img src="IMG/pistacho.png" alt="Cheesecake de Pistacho">
+                    </div>
                     <div class="product-info">
                         <h3>Cheesecake de Pistacho</h3>
-                        <p>
-                            Una combinación fresca y equilibrada
-                            de cheesecake y limón.
-                        </p>
-                        <strong>$12.500</strong>
+                        <p>Una combinación fina y equilibrada con el sabor único del pistacho.</p>
+                        <div class="product-footer">
+                            <strong>$13.000</strong>
+                            <a href="#pedido" class="order-link">Pedir ahora</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="product-card">
-                    <div class="product-image"><img src="IMG/cheecakeplatofrutosrojos.png" alt="Cheesecake de Frutos rojos"></div>
+                <!-- 4. Frutos Rojos -->
+                <article class="product-card" data-flavor="frutos-rojos">
+                    <div class="product-image">
+                        <img src="IMG/frutosrojos.png" alt="Cheesecake de Frutos Rojos">
+                    </div>
                     <div class="product-info">
                         <h3>Cheesecake de Frutos Rojos</h3>
-                        <p>
-                            Cheesecake clásico acompañado de
-                            frutos rojos y salsa artesanal.
-                        </p>
-                        <strong>$12.500</strong>
+                        <p>Cheesecake clásico acompañado de frutos rojos y salsa artesanal.</p>
+                        <div class="product-footer">
+                            <strong>$12.500</strong>
+                            <a href="#pedido" class="order-link">Pedir ahora</a>
+                        </div>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <!-- Sección de Pedido (Formulario) -->
+        <!-- Sección de Pedido -->
         <section id="pedido" class="order-section">
             <div class="order-container">
                 <div class="order-header">
@@ -123,7 +140,6 @@
                 </div>
 
                 <form id="whatsapp-form" class="order-form">
-                    
                     <div class="form-group">
                         <label for="nombre">Nombre completo *</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Ej. Sofía Gómez" required>
@@ -140,19 +156,43 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="cheesecake">Cheesecake elegido *</label>
-                        <select id="cheesecake" name="cheesecake" required>
-                            <option value="" disabled selected>Seleccioná una opción</option>
-                            <option value="Cheesecake de Frutilla — $8.500">Cheesecake de Frutilla — $8.500</option>
-                            <option value="Cheesecake de Chocolate — $9.000">Cheesecake de Chocolate — $9.000</option>
-                            <option value="Cheesecake de Limón — $8.500">Cheesecake de Limón — $8.500</option>
-                            <option value="Cheesecake de Frutos Rojos — $9.500">Cheesecake de Frutos Rojos — $9.500</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="cantidad">Cantidad *</label>
-                        <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10" required>
+                        <label>Cheesecakes y Cantidades *</label>
+                        <p class="form-subtitle">Elegí cuántos querés de cada sabor</p>
+                        <div class="quantity-grid">
+                            <div class="quantity-item" data-flavor-key="frutilla">
+                                <span class="flavor-name">Cheesecake de Frutilla</span>
+                                <div class="quantity-controls">
+                                    <button type="button" class="qty-btn" data-action="decrement">-</button>
+                                    <input type="number" class="qty-input" name="qty_frutilla" value="0" min="0" max="10" data-flavor="Cheesecake de Frutilla">
+                                    <button type="button" class="qty-btn" data-action="increment">+</button>
+                                </div>
+                            </div>
+                            <div class="quantity-item" data-flavor-key="chocolate">
+                                <span class="flavor-name">Cheesecake de Chocolate</span>
+                                <div class="quantity-controls">
+                                    <button type="button" class="qty-btn" data-action="decrement">-</button>
+                                    <input type="number" class="qty-input" name="qty_chocolate" value="0" min="0" max="10" data-flavor="Cheesecake de Chocolate">
+                                    <button type="button" class="qty-btn" data-action="increment">+</button>
+                                </div>
+                            </div>
+                            <div class="quantity-item" data-flavor-key="pistacho">
+                                <span class="flavor-name">Cheesecake de Pistacho</span>
+                                <div class="quantity-controls">
+                                    <button type="button" class="qty-btn" data-action="decrement">-</button>
+                                    <input type="number" class="qty-input" name="qty_pistacho" value="0" min="0" max="10" data-flavor="Cheesecake de Pistacho">
+                                    <button type="button" class="qty-btn" data-action="increment">+</button>
+                                </div>
+                            </div>
+                            <div class="quantity-item" data-flavor-key="frutos-rojos">
+                                <span class="flavor-name">Cheesecake de Frutos Rojos</span>
+                                <div class="quantity-controls">
+                                    <button type="button" class="qty-btn" data-action="decrement">-</button>
+                                    <input type="number" class="qty-input" name="qty_frutos_rojos" value="0" min="0" max="10" data-flavor="Cheesecake de Frutos Rojos">
+                                    <button type="button" class="qty-btn" data-action="increment">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="quantity-error" style="display: none; color: #b22222; font-family: Arial, sans-serif; font-size: 13px; margin-top: 5px;">Debes seleccionar al menos un cheesecake.</div>
                     </div>
 
                     <div class="form-group">
@@ -167,13 +207,12 @@
 
                     <div class="form-group">
                         <label for="comentarios">Comentarios o indicaciones especiales (Opcional)</label>
-                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Ej. Tocar timbre 2B, sin frutos secos, etc."></textarea>
+                        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Ej. Tocar timbre 2B..."></textarea>
                     </div>
 
                     <div class="form-actions">
                         <button type="submit" class="button form-button">Enviar pedido por WhatsApp</button>
                     </div>
-
                 </form>
             </div>
         </section>
@@ -183,37 +222,17 @@
             <div>
                 <p class="small-title">SOBRE ALELÍ</p>
                 <h2>Hecho artesanalmente,<br>hecho con amor.</h2>
-
-                <p>
-                    En Alelí creemos que los mejores momentos
-                    empiezan con algo rico. Por eso elaboramos
-                    nuestros cheesecakes de manera artesanal,
-                    cuidando cada detalle.
-                </p>
-
-                <p>
-                    Ingredientes seleccionados, recetas caseras
-                    y mucho amor en cada preparación.
-                </p>
+                <p>En Alelí creemos que los mejores momentos empiezan con algo rico...</p>
             </div>
-
-            <div class="about-decoration">
-                🧁
-            </div>
+            <div class="about-decoration">🧁</div>
         </section>
 
         <!-- Contacto -->
         <section id="contacto" class="contact">
             <p class="small-title">¿TENÉS UN ANTOJO?</p>
             <h2>Elegí tu cheesecake favorito</h2>
-
-            <p>
-                Hacé tu pedido y disfrutá de un momento dulce con Alelí.
-            </p>
-
             <a href="#pedido" class="button">Hacer un pedido</a>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -223,44 +242,93 @@
         <p>© 2026 Alelí. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JavaScript para WhatsApp -->
+    <!-- Script -->
     <script>
-        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderLinks = document.querySelectorAll('.order-link');
+            orderLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const card = this.closest('.product-card');
+                    const flavor = card.getAttribute('data-flavor');
+                    
+                    const pedidoSection = document.getElementById('pedido');
+                    pedidoSection.scrollIntoView({ behavior: 'smooth' });
+                    
+                    if (flavor) {
+                        const flavorItem = document.querySelector(`.quantity-item[data-flavor-key="${flavor}"]`);
+                        if (flavorItem) {
+                            const input = flavorItem.querySelector('.qty-input');
+                            let currentVal = parseInt(input.value) || 0;
+                            input.value = currentVal + 1;
+                        }
+                    }
+                });
+            });
 
-            // Capturar los valores de los campos
-            const nombre = document.getElementById('nombre').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const direccion = document.getElementById('direccion').value.trim();
-            const cheesecake = document.getElementById('cheesecake').value;
-            const cantidad = document.getElementById('cantidad').value;
-            const pago = document.getElementById('pago').value;
-            const comentarios = document.getElementById('comentarios').value.trim();
+            const qtyButtons = document.querySelectorAll('.qty-btn');
+            qtyButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const controls = this.closest('.quantity-controls');
+                    const input = controls.querySelector('.qty-input');
+                    let value = parseInt(input.value) || 0;
+                    const min = parseInt(input.getAttribute('min')) || 0;
+                    const max = parseInt(input.getAttribute('max')) || 10;
+                    const action = this.getAttribute('data-action');
 
-            // Número de WhatsApp del emprendimiento (Reemplazar con tu número real con código de país y área, sin '+' ni espacios, ej: 5493511234567)
-            const numeroWhatsApp = "5493510000000";
+                    if (action === 'increment' && value < max) {
+                        input.value = value + 1;
+                    } else if (action === 'decrement' && value > min) {
+                        input.value = value - 1;
+                    }
+                });
+            });
 
-            // Armar el mensaje estructurado
-            let mensaje = `Hola! Quiero hacer un nuevo pedido en Alelí 🍰:\n\n` +
-                          `*Nombre:* ${nombre}\n` +
-                          `*Teléfono:* ${telefono}\n` +
-                          `*Dirección:* ${direccion}\n` +
-                          `*Cheesecake:* ${cheesecake}\n` +
-                          `*Cantidad:* ${cantidad}\n` +
-                          `*Método de pago:* ${pago}`;
+            document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombre = document.getElementById('nombre').value.trim();
+                const telefono = document.getElementById('telefono').value.trim();
+                const direccion = document.getElementById('direccion').value.trim();
+                const pago = document.getElementById('pago').value;
+                const comentarios = document.getElementById('comentarios').value.trim();
 
-            if (comentarios !== "") {
-                mensaje += `\n*Comentarios:* ${comentarios}`;
-            }
+                const qtyInputs = document.querySelectorAll('.qty-input');
+                let pedidoItems = [];
+                let totalCheesecakes = 0;
 
-            // Codificar el mensaje para URL
-            const mensajeCodificado = encodeURIComponent(mensaje);
+                qtyInputs.forEach(input => {
+                    const qty = parseInt(input.value) || 0;
+                    if (qty > 0) {
+                        const flavorName = input.getAttribute('data-flavor');
+                        pedidoItems.push(`- ${flavorName} x${qty}`);
+                        totalCheesecakes += qty;
+                    }
+                });
 
-            // Redirigir a WhatsApp
-            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
-            window.open(urlWhatsApp, '_blank');
+                const errorDiv = document.getElementById('quantity-error');
+                if (totalCheesecakes === 0) {
+                    errorDiv.style.display = 'block';
+                    return;
+                } else {
+                    errorDiv.style.display = 'none';
+                }
+
+                const numeroWhatsApp = "5493510000000";
+                let mensaje = `Hola, quiero realizar un pedido en Alelí 🍰\n\n` +
+                            `Nombre: ${nombre}\n` +
+                            `Teléfono: ${telefono}\n` +
+                            `Dirección: ${direccion}\n\n` +
+                            `Pedido:\n` + pedidoItems.join('\n') + `\n\n` +
+                            `Método de pago:\n` + pago;
+
+                if (comentarios !== "") {
+                    mensaje += `\n\nComentarios:\n${comentarios}`;
+                }
+
+                const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+                window.open(urlWhatsApp, '_blank');
+            });
         });
     </script>
-
 </body>
 </html>

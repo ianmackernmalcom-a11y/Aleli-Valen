@@ -1,5 +1,5 @@
 /* ------------------------------
-   ESTILOS GENERALES
+    ESTILOS GENERALES
 ------------------------------ */
 
 * {
@@ -13,15 +13,10 @@ html {
 }
 
 body {
- font-family: "Brush Script MT", cursive;
-background-color: #f7f0df;
-color: #3f3a35;
-line-height: 1.6;
-
-
-
-
-
+    font-family: "Brush Script MT", cursive;
+    background-color: #f7f0df;
+    color: #3f3a35;
+    line-height: 1.6;
 }
 
 a {
@@ -30,7 +25,7 @@ a {
 }
 
 /* ------------------------------
-   NAVBAR
+    NAVBAR
 ------------------------------ */
 
 header {
@@ -44,31 +39,36 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-size: 42px;
+.navbar .logo-container .navbar-logo-text {
+    font-family: "Brush Script MT", cursive;
+    font-size: 38px;
     color: #2864a8;
-    font-style: italic;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px;
+    gap: 30px;
     font-family: Arial, sans-serif;
+    flex: 1;
 }
 
-.nav-links a {
-    color: #514b44;
-    font-size: 15px;
-    transition: 0.3s;
+.nav-left {
+    justify-content: flex-start;
 }
 
-.nav-links a:hover {
-    color: #2864a8;
+.nav-right {
+    justify-content: flex-end;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+    padding: 0 20px;
+}
 /* ------------------------------
-   HERO
+    HERO / INICIO
 ------------------------------ */
 
 .hero {
@@ -78,19 +78,27 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    background-image: url('../IMG/bannersolo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-text {
     max-width: 600px;
 }
 
-.small-title {
-    color: #2864a8;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
+/* Contenedor del título centralizado */
+.hero-brand-title-container {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+}
+
+.hero-title-img {
+    max-width: 140px; /* Tamaño limitado y elegante */
+    height: auto;
+    display: block;
 }
 
 .hero h2 {
@@ -98,16 +106,27 @@ header {
     font-size: 58px;
     line-height: 1.1;
     margin-bottom: 25px;
+    text-align: center; /* Texto principal centrado también */
 }
 
 .hero-text > p:not(.small-title) {
     max-width: 500px;
     font-size: 18px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hero-text .button {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ------------------------------
-   BOTONES
+    BOTONES
 ------------------------------ */
 
 .button {
@@ -130,7 +149,7 @@ header {
 }
 
 /* ------------------------------
-   TARJETA HERO
+    TARJETA HERO
 ------------------------------ */
 
 .hero-card {
@@ -144,26 +163,38 @@ header {
     align-items: center;
     text-align: center;
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
+    padding: 20px;
+    flex-shrink: 0;
 }
 
-.hero-card span {
-    font-size: 110px;
-    margin-bottom: 10px;
+.hero-card-img-container {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-card h3 {
-    color: #2864a8;
-    font-size: 35px;
-    font-style: italic;
+.hero-slice {
+    max-width: 140px;
+    height: auto;
+    display: block;
+}
+
+.hero-brand-img {
+    max-width: 110px;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .hero-card p {
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    color: #6a6258;
 }
 
 /* ------------------------------
-   PRODUCTOS
+    PRODUCTOS
 ------------------------------ */
 
 .products {
@@ -200,6 +231,8 @@ header {
     border-radius: 18px;
     overflow: hidden;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -208,49 +241,71 @@ header {
 }
 
 .product-image {
-    height: 190px;
+    height: 200px;
     width: 100%;
-    background-color: #eadcc3; /* Mantiene el color de fondo estético */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px; /* Un pequeño respiro para que la foto no pegue contra los bordes */
+    background-color: #eadcc3;
+    overflow: hidden; /* Oculta lo que sobresalga si la imagen es más grande */
 }
 
 .product-image img {
-    max-width: 100%;
-    max-height: 120%;
-    object-fit: contain; /* Cambiado de cover a contain para que se vea la torta entera sin cortarse mal */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen llene todo el espacio recortándose proporcionalmente */
     display: block;
 }
 
-
 .product-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .product-info h3 {
     color: #2864a8;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .product-info p {
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: #71695f;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
 }
 
 .product-info strong {
     color: #3f3a35;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
+}
+
+.order-link {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2864a8;
+    background-color: #f4e9d7;
+    padding: 8px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.order-link:hover {
+    background-color: #2864a8;
+    color: white;
 }
 
 /* ------------------------------
-   NOSOTROS
+    NOSOTROS
 ------------------------------ */
 
 .about {
@@ -286,7 +341,7 @@ header {
 }
 
 /* ------------------------------
-   CONTACTO
+    CONTACTO
 ------------------------------ */
 
 .contact {
@@ -316,7 +371,7 @@ header {
 }
 
 /* ------------------------------
-   FOOTER
+    FOOTER
 ------------------------------ */
 
 footer {
@@ -339,30 +394,30 @@ footer p {
 }
 
 /* ------------------------------
-   ESTILOS PÁGINA DE PEDIDOS (pedido.html)
+    SECCIÓN DE PEDIDOS (.order-section)
 ------------------------------ */
 
-.order-page {
+.order-section {
+    padding: 100px 8%;
+    background-image: url('../IMG/bannerAleli.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
-    background-color: #f7f0df;
 }
 
 .order-container {
     background-color: #fffaf0;
     width: 100%;
-    max-width: 600px;
+    max-width: 680px;
     padding: 45px 40px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
 }
 
 .order-header {
-    background-color: transparent;
-    padding: 0;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -392,6 +447,13 @@ footer p {
     gap: 8px;
 }
 
+.form-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #71695f;
+    margin-bottom: 5px;
+}
+
 .form-group label {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -399,7 +461,7 @@ footer p {
     color: #3f3a35;
 }
 
-.form-group input,
+.form-group input:not(.qty-input),
 .form-group select,
 .form-group textarea {
     width: 100%;
@@ -414,7 +476,7 @@ footer p {
     transition: 0.3s;
 }
 
-.form-group input:focus,
+.form-group input:not(.qty-input):focus,
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: #2864a8;
@@ -424,6 +486,68 @@ footer p {
 
 .form-group textarea {
     resize: vertical;
+}
+
+.quantity-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quantity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f0df;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #dcd1be;
+}
+
+.flavor-name {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3f3a35;
+    font-weight: 500;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #2864a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background-color: #1d4d82;
+}
+
+.qty-input {
+    width: 45px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #dcd1be;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #3f3a35;
+    outline: none;
 }
 
 .form-actions {
@@ -441,24 +565,11 @@ footer p {
     font-weight: bold;
 }
 
-.back-link {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #2864a8;
-    transition: 0.3s;
-}
-
-.back-link:hover {
-    text-decoration: underline;
-    color: #1d4d82;
-}
-
 /* ------------------------------
-   RESPONSIVE
+    RESPONSIVE
 ------------------------------ */
 
 @media (max-width: 900px) {
-
     .nav-links {
         gap: 15px;
     }
@@ -484,7 +595,6 @@ footer p {
 }
 
 @media (max-width: 600px) {
-
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -508,8 +618,12 @@ footer p {
         height: 260px;
     }
 
-    .hero-card span {
-        font-size: 70px;
+    .hero-slice {
+        max-width: 100px;
+    }
+
+    .hero-brand-img {
+        max-width: 90px;
     }
 
     .product-grid {
