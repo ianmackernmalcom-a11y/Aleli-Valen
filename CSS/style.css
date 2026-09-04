@@ -1,183 +1,355 @@
 /* ------------------------------
+
     ESTILOS GENERALES
+
 ------------------------------ */
+
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
 }
+
+
 
 body {
+
     font-family: "Brush Script MT", cursive;
+
     background-color: #f7f0df;
+
     color: #3f3a35;
+
     line-height: 1.6;
+
 }
+
+
 
 a {
+
     text-decoration: none;
+
     color: inherit;
+
 }
 
+
+
 /* ------------------------------
+
     NAVBAR
+
 ------------------------------ */
+
+
 
 header {
+
     background-color: #f4e9d7;
+
     padding: 20px 7%;
+
 }
+
+
 
 .navbar {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
 }
+
+
 
 .navbar .logo-container .navbar-logo-text {
-    font-family: "Brush Script MT", cursive;
-    font-size: 38px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 500;
+
+    font-style: italic; /* Queda increíblemente aesthetic en cursiva sutil */
+
+    font-size: 36px;
+
     color: #2864a8;
+
 }
+
+
 
 .nav-links {
+
     display: flex;
+
     list-style: none;
+
     gap: 30px;
+
     font-family: Arial, sans-serif;
+
     flex: 1;
+
 }
+
+
 
 .nav-left {
+
     justify-content: flex-start;
+
 }
+
+
 
 .nav-right {
+
     justify-content: flex-end;
+
 }
+
+
 
 .logo-container {
+
     display: flex;
+
     justify-content: center;
+
     flex: 0 0 auto;
+
     padding: 0 20px;
+
 }
+
 /* ------------------------------
+
     HERO / INICIO (Actualizado)
+
 ------------------------------ */
+
+
 
 .hero {
+
     min-height: 600px;
+
     padding: 80px 7%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 40px;
+
     background-image: url('../IMG/bannersolo.png');
+
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
+
 }
+
+
 
 /* Caja estilo tarjeta para el texto de la izquierda (ocupa aprox la mitad) */
+
 .hero-box {
+
     background-color: #fffaf0;
+
     width: 100%;
+
     max-width: 520px;
+
     padding: 45px 40px;
+
     border-radius: 20px;
+
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
+
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Mismo efecto que las secciones */
+
 }
+
+
 
 /* Efecto hover idéntico al de las product-card / order-container */
+
 .hero-box:hover {
+
     transform: translateY(-7px);
+
     box-shadow: 0 15px 30px rgba(70, 55, 35, 0.18);
+
 }
+
+
 
 .hero h2 {
+
     color: #2864a8;
+
     font-size: 42px;
+
     line-height: 1.1;
+
     margin-bottom: 20px;
+
     text-align: left; /* Alineado prolijo dentro de la caja */
+
 }
+
+
 
 .hero-box p {
+
     font-family: Arial, sans-serif;
+
     font-size: 15px;
+
     color: #71695f;
+
     margin-bottom: 25px;
+
     text-align: left;
+
 }
+
+
 
 .hero-box .button {
+
     display: inline-block;
+
     margin-left: 0;
+
     margin-right: 0;
+
 }
 
+
+
 /* ------------------------------
+
     BOTONES
+
 ------------------------------ */
 
+
+
 .button {
+
     display: inline-block;
+
     background-color: #2864a8;
+
     color: white;
+
     padding: 13px 28px;
+
     border-radius: 30px;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     border: none;
+
     cursor: pointer;
+
     text-align: center;
+
     transition: 0.3s;
+
 }
+
+
 
 .button:hover {
+
     background-color: #1d4d82;
+
     transform: translateY(-2px);
+
 }
 
+
+
 /* ------------------------------
+
     TARJETA HERO (Círculo derecho)
+
+------------------------------ */
+
+
+
+/* ------------------------------
+    TARJETA HERO (Círculo derecho perfecto y centrado)
 ------------------------------ */
 
 .hero-card {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background-color: #eadcc3;
+    background-color: #eadcc3; /* Fondo beige circular */
+    overflow: hidden; /* Recorta la imagen para que tome la forma de círculo exacto */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
-    padding: 25px;
     flex-shrink: 0;
 }
 
+
+
 .hero-card-img-container {
+
     width: 110px;
+
     height: 110px;
+
     border-radius: 50%;
+
     overflow: hidden; /* Recorta perfectamente cualquier imagen que coloques para que quede redonda */
+
     margin-bottom: 10px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     background-color: #fff;
+
 }
 
-/* La imagen se adapta sola y llena el contenedor circular de forma limpia */
+
+
+/* La imagen ocupa el 100% del círculo de manera centrada */
 .hero-slice {
     width: 100%;
     height: 100%;
@@ -185,463 +357,921 @@ header {
     display: block;
 }
 
+
+
 .hero-card-brand {
+
     font-family: "Brush Script MT", cursive;
+
     font-size: 26px;
+
     color: #2864a8;
+
     margin-bottom: 2px;
+
 }
+
+
 
 .hero-card p {
+
     font-family: Arial, sans-serif;
+
     font-size: 12px;
+
     color: #6a6258;
+
 }
+
+
 
 /* ------------------------------
+
     PRODUCTOS
+
 ------------------------------ */
 
+
+
 .products {
+
     background-color: #fffaf0;
+
     padding: 90px 8%;
+
 }
+
+
 
 .section-title {
+
     text-align: center;
+
     margin-bottom: 50px;
+
 }
+
+
 
 .section-title p {
+
     color: #2864a8;
+
     font-family: Arial, sans-serif;
+
     font-size: 12px;
+
     letter-spacing: 3px;
+
     font-weight: bold;
+
 }
+
+
 
 .section-title h2 {
+
     font-size: 42px;
-    color: #3f3a35;
+
+    color: #2864a8;
+
 }
+
+
 
 .product-grid {
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
+
 }
+
+
 
 .product-card {
+
     background-color: #f7f0df;
+
     border-radius: 18px;
+
     overflow: hidden;
+
     transition: 0.3s;
+
     display: flex;
+
     flex-direction: column;
+
 }
+
+
 
 .product-card:hover {
+
     transform: translateY(-7px);
+
     box-shadow: 0 15px 30px rgba(70, 55, 35, 0.12);
+
 }
+
+
 
 .product-image {
+
     height: 200px;
+
     width: 100%;
+
     background-color: #eadcc3;
+
     overflow: hidden; /* Oculta lo que sobresalga si la imagen es más grande */
+
 }
+
+
 
 .product-image img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover; /* Hace que la imagen llene todo el espacio recortándose proporcionalmente */
+
     display: block;
+
 }
 
-.product-info {
+
+
+ {
+
     padding: 25px;
+
     display: flex;
+
     flex-direction: column;
+
     flex-grow: 1;
+
 }
+
+
 
 .product-info h3 {
     color: #2864a8;
     font-size: 20px;
     margin-bottom: 10px;
+    white-space: nowrap; /* Evita que el título se rompa y baje renglón */
 }
+
+
 
 .product-info p {
+
     font-family: Arial, sans-serif;
+
     font-size: 13px;
+
     color: #71695f;
+
     margin-bottom: 20px;
+
     flex-grow: 1;
+
 }
+
+
 
 .product-footer {
+
     display: flex;
+
     justify-content: space-between;
+.product-info
     align-items: center;
+
     margin-top: auto;
+
 }
+
+
 
 .product-info strong {
+
     color: #3f3a35;
+
     font-family: Arial, sans-serif;
+
     font-size: 17px;
+
 }
+
+
 
 .order-link {
+
     font-family: Arial, sans-serif;
+
     font-size: 12px;
+
     font-weight: bold;
+
     color: #2864a8;
+
     background-color: #f4e9d7;
+
     padding: 8px 14px;
+
     border-radius: 20px;
+
     transition: 0.3s;
+
 }
+
+
 
 .order-link:hover {
+
     background-color: #2864a8;
+
     color: white;
+
 }
 
+
+
 /* ------------------------------
+
     NOSOTROS
+
 ------------------------------ */
+
+
 
 .about {
+
     padding: 100px 12%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 80px;
+
 }
+
+
 
 .about h2 {
+
     color: #2864a8;
+
     font-size: 44px;
+
     line-height: 1.2;
+
     margin-bottom: 25px;
+
 }
+
+
 
 .about p:not(.small-title) {
+
     max-width: 600px;
+
     margin-bottom: 15px;
+
     font-size: 17px;
+
 }
+
+
 
 .about-decoration {
+
     width: 280px;
+
     height: 280px;
+
     border-radius: 50%;
+
     background-color: #eadcc3;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 100px;
+
 }
 
+
+
 /* ------------------------------
+
     CONTACTO
+
 ------------------------------ */
+
+
 
 .contact {
+
     background-color: #2864a8;
+
     color: white;
+
     text-align: center;
+
     padding: 80px 20px;
+
 }
+
+
 
 .contact .small-title {
+
     color: #f7f0df;
+
 }
+
+
 
 .contact h2 {
+
     font-size: 42px;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .contact p:not(.small-title) {
+
     margin-bottom: 25px;
+
     font-family: Arial, sans-serif;
+
 }
+
+
 
 .contact .button {
-    background-color: #f7f0df;
+
+    background-color: #eadcc3;
+
     color: #2864a8;
+
 }
 
+
+
 /* ------------------------------
+
     FOOTER
+
 ------------------------------ */
+
+
 
 footer {
+
     background-color: #f7f0df;
+
     text-align: center;
+
     padding: 40px 20px;
+
 }
+
+
 
 footer h2 {
+
     color: #2864a8;
+
     font-size: 35px;
+
     font-style: italic;
+
 }
+
+
 
 footer p {
+
     font-family: Arial, sans-serif;
+
     font-size: 13px;
+
     color: #777066;
+
     margin-top: 5px;
+
 }
 
+
+
 /* ------------------------------
+
     SECCIÓN DE PEDIDOS (.order-section)
+
 ------------------------------ */
+
+
 
 .order-section {
+
     padding: 100px 8%;
+
     background-image: url('../IMG/bannerAleli.png');
+
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
 }
+
+
 
 .order-container {
+
     background-color: #fffaf0;
+
     width: 100%;
+
     max-width: 680px;
+
     padding: 45px 40px;
+
     border-radius: 20px;
+
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
+
 }
+
+
 
 .order-header {
+
     text-align: center;
+
     margin-bottom: 30px;
+
 }
+
+
 
 .order-header h2 {
+
     color: #2864a8;
+
     font-size: 34px;
+
     margin-top: 10px;
+
     margin-bottom: 8px;
+
 }
+
+
 
 .order-header p {
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     color: #71695f;
+
 }
+
+
 
 .order-form {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 20px;
+
 }
+
+
 
 .form-group {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
+
 }
+
+
 
 .form-subtitle {
+
     font-family: Arial, sans-serif;
+
     font-size: 13px;
+
     color: #71695f;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .form-group label {
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     font-weight: bold;
+
     color: #3f3a35;
+
 }
+
+
 
 .form-group input:not(.qty-input),
+
 .form-group select,
+
 .form-group textarea {
+
     width: 100%;
+
     padding: 12px 16px;
+
     border: 1px solid #dcd1be;
+
     border-radius: 12px;
+
     background-color: #f7f0df;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     color: #3f3a35;
+
     outline: none;
+
     transition: 0.3s;
+
 }
+
+
 
 .form-group input:not(.qty-input):focus,
+
 .form-group select:focus,
+
 .form-group textarea:focus {
+
     border-color: #2864a8;
+
     background-color: #fff;
+
     box-shadow: 0 0 0 3px rgba(40, 100, 168, 0.1);
+
 }
+
+
 
 .form-group textarea {
+
     resize: vertical;
+
 }
+
+
 
 .quantity-grid {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 12px;
+
 }
+
+
 
 .quantity-item {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     background-color: #f7f0df;
+
     padding: 12px 16px;
+
     border-radius: 12px;
+
     border: 1px solid #dcd1be;
+
 }
+
+
 
 .flavor-name {
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     color: #3f3a35;
+
     font-weight: 500;
+
 }
+
+
 
 .quantity-controls {
+
     display: flex;
+
     align-items: center;
+
     gap: 8px;
+
 }
+
+
 
 .qty-btn {
+
     width: 32px;
+
     height: 32px;
+
     background-color: #2864a8;
+
     color: white;
+
     border: none;
+
     border-radius: 8px;
+
     font-size: 16px;
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
+
+
 
 .qty-btn:hover {
+
     background-color: #1d4d82;
+
 }
+
+
 
 .qty-input {
+
     width: 45px;
+
     height: 32px;
+
     text-align: center;
+
     border: 1px solid #dcd1be;
+
     border-radius: 8px;
+
     background-color: #fff;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
+
     color: #3f3a35;
+
     outline: none;
+
 }
+
+
 
 .form-actions {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
+
     margin-top: 10px;
+
     align-items: center;
+
 }
+
+
 
 .form-button {
+
     width: 100%;
+
     padding: 14px;
+
     font-size: 15px;
+
     font-weight: bold;
+
 }
+
+
 
 /* ------------------------------
+
     RESPONSIVE
+
 ------------------------------ */
 
+
+
 @media (max-width: 900px) {
+
     .nav-links {
+
         gap: 15px;
+
     }
+
+
 
     .hero {
+
         flex-direction: column;
+
         text-align: center;
+
         padding-top: 50px;
+
     }
+
+
 
     .hero h2 {
+
         font-size: 44px;
+
     }
 
+
+
     .product-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
+
 
     .about {
+
         flex-direction: column;
+
         text-align: center;
+
     }
+
 }
 
+
+
 @media (max-width: 600px) {
+
     .navbar {
+
         flex-direction: column;
+
         gap: 15px;
+
     }
+
+
 
     .nav-links {
+
         flex-wrap: wrap;
+
         justify-content: center;
+
     }
+
+
 
     .hero {
+
         padding: 50px 6%;
+
     }
+
+
 
     .hero h2 {
+
         font-size: 36px;
+
     }
+
+
 
     .hero-card {
+
         width: 260px;
+
         height: 260px;
+
     }
+
+
 
     .hero-slice {
+
         max-width: 100px;
+
     }
+
+
 
     .hero-brand-img {
+
         max-width: 90px;
+
     }
+
+
 
     .product-grid {
+
         grid-template-columns: 1fr;
+
     }
+
+
 
     .section-title h2,
+
     .about h2,
+
     .contact h2 {
+
         font-size: 32px;
+
     }
 
+
+
     .order-container {
+
         padding: 30px 20px;
+
     }
+
 }

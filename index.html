@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- Navegación -->
+    <!-- Navegación -->
     <header>
         <nav class="navbar">
             <ul class="nav-links nav-left">
@@ -45,12 +45,9 @@
                 </a>
             </div>
 
+            <!-- Círculo derecho limpio con la foto centrada -->
             <div class="hero-card">
-                <div class="hero-card-img-container">
-                    <img src="IMG/chocolate.png" alt="Porción de Cheesecake" class="hero-slice">
-                </div>
-                <h3 class="hero-card-brand">Alelí</h3>
-                <p>Cheesecakes hechos con amor</p>
+                <img src="IMG/bigcheesecake.png" alt="Porción de Cheesecake" class="hero-slice">
             </div>
         </section>
 
@@ -66,7 +63,7 @@
                 <!-- 1. Frutilla -->
                 <article class="product-card" data-flavor="frutilla">
                     <div class="product-image">
-                        <img src="IMG/FURTIGRANDE.png" alt="Cheesecake de Frutilla">
+                        <img src="IMG/frutilla alale.png" alt="Cheesecake de Frutilla">
                     </div>
                     <div class="product-info">
                         <h3>Cheesecake de Frutilla</h3>
@@ -85,7 +82,7 @@
                     </div>
                     <div class="product-info">
                         <h3>Cheesecake de Chocolate</h3>
-                        <p>Cremoso cheesecake de chocolate con una suave cobertura de cacao.</p>
+                        <p>Base crocante, suave crema de cheesecake y una intensa cobertura de chocolate..</p>
                         <div class="product-footer">
                             <strong>$12.000</strong>
                             <a href="#pedido" class="order-link">Pedir ahora</a>
@@ -96,7 +93,7 @@
                 <!-- 3. Pistacho -->
                 <article class="product-card" data-flavor="pistacho">
                     <div class="product-image">
-                        <img src="IMG/MATCHA.png" alt="Cheesecake de Pistacho">
+                        <img src="IMG/matcha2.png" alt="Cheesecake de Pistacho">
                     </div>
                     <div class="product-info">
                         <h3>Cheesecake de Pistacho</h3>
@@ -108,13 +105,13 @@
                     </div>
                 </article>
 
-                <!-- 4. Frutos Rojos -->
+                <!-- 4. Arándanos -->
                 <article class="product-card" data-flavor="frutos-rojos">
                     <div class="product-image">
-                        <img src="IMG/frutosrojos.png" alt="Cheesecake de Frutos Rojos">
+                        <img src="IMG/frutosrojos.png" alt="Cheesecake de Arándanos">
                     </div>
                     <div class="product-info">
-                        <h3>Cheesecake de Frutos Rojos</h3>
+                        <h3>Cheesecake de Arándanos</h3>
                         <p>Cheesecake clásico acompañado de frutos rojos y salsa artesanal.</p>
                         <div class="product-footer">
                             <strong>$12.500</strong>
@@ -154,6 +151,8 @@
                     <div class="form-group">
                         <label>Cheesecakes y Cantidades *</label>
                         <p class="form-subtitle">Elegí cuántos querés de cada sabor</p>
+                        
+                        <!-- Cuadrícula con las clases completas de tu CSS -->
                         <div class="quantity-grid">
                             <div class="quantity-item" data-flavor-key="frutilla">
                                 <span class="flavor-name">Cheesecake de Frutilla</span>
@@ -163,6 +162,7 @@
                                     <button type="button" class="qty-btn" data-action="increment">+</button>
                                 </div>
                             </div>
+                            
                             <div class="quantity-item" data-flavor-key="chocolate">
                                 <span class="flavor-name">Cheesecake de Chocolate</span>
                                 <div class="quantity-controls">
@@ -171,6 +171,7 @@
                                     <button type="button" class="qty-btn" data-action="increment">+</button>
                                 </div>
                             </div>
+                            
                             <div class="quantity-item" data-flavor-key="pistacho">
                                 <span class="flavor-name">Cheesecake de Pistacho</span>
                                 <div class="quantity-controls">
@@ -179,6 +180,7 @@
                                     <button type="button" class="qty-btn" data-action="increment">+</button>
                                 </div>
                             </div>
+                            
                             <div class="quantity-item" data-flavor-key="frutos-rojos">
                                 <span class="flavor-name">Cheesecake de Frutos Rojos</span>
                                 <div class="quantity-controls">
@@ -188,6 +190,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div id="quantity-error" style="display: none; color: #b22222; font-family: Arial, sans-serif; font-size: 13px; margin-top: 5px;">Debes seleccionar al menos un cheesecake.</div>
                     </div>
 
