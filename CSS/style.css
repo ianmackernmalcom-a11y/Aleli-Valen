@@ -68,61 +68,59 @@ header {
     padding: 0 20px;
 }
 /* ------------------------------
-    HERO / INICIO
+    HERO / INICIO (Actualizado)
 ------------------------------ */
 
 .hero {
     min-height: 600px;
-    padding: 80px 10%;
+    padding: 80px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     background-image: url('../IMG/bannersolo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.hero-text {
-    max-width: 600px;
+/* Caja estilo tarjeta para el texto de la izquierda (ocupa aprox la mitad) */
+.hero-box {
+    background-color: #fffaf0;
+    width: 100%;
+    max-width: 520px;
+    padding: 45px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Mismo efecto que las secciones */
 }
 
-/* Contenedor del título centralizado */
-.hero-brand-title-container {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-}
-
-.hero-title-img {
-    max-width: 140px; /* Tamaño limitado y elegante */
-    height: auto;
-    display: block;
+/* Efecto hover idéntico al de las product-card / order-container */
+.hero-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(70, 55, 35, 0.18);
 }
 
 .hero h2 {
     color: #2864a8;
-    font-size: 58px;
+    font-size: 42px;
     line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: left; /* Alineado prolijo dentro de la caja */
+}
+
+.hero-box p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #71695f;
     margin-bottom: 25px;
-    text-align: center; /* Texto principal centrado también */
+    text-align: left;
 }
 
-.hero-text > p:not(.small-title) {
-    max-width: 500px;
-    font-size: 18px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.hero-text .button {
-    display: block;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+.hero-box .button {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* ------------------------------
@@ -149,12 +147,12 @@ header {
 }
 
 /* ------------------------------
-    TARJETA HERO
+    TARJETA HERO (Círculo derecho)
 ------------------------------ */
 
 .hero-card {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     background-color: #eadcc3;
     display: flex;
@@ -163,28 +161,35 @@ header {
     align-items: center;
     text-align: center;
     box-shadow: 0 15px 35px rgba(75, 60, 40, 0.12);
-    padding: 20px;
+    padding: 25px;
     flex-shrink: 0;
 }
 
 .hero-card-img-container {
-    margin-bottom: 5px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden; /* Recorta perfectamente cualquier imagen que coloques para que quede redonda */
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 
+/* La imagen se adapta sola y llena el contenedor circular de forma limpia */
 .hero-slice {
-    max-width: 140px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
     display: block;
 }
 
-.hero-brand-img {
-    max-width: 110px;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
+.hero-card-brand {
+    font-family: "Brush Script MT", cursive;
+    font-size: 26px;
+    color: #2864a8;
+    margin-bottom: 2px;
 }
 
 .hero-card p {
@@ -423,7 +428,7 @@ footer p {
 }
 
 .order-header h2 {
-    color: #3f3a35;
+    color: #2864a8;
     font-size: 34px;
     margin-top: 10px;
     margin-bottom: 8px;
